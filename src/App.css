@@ -9,7 +9,6 @@
 
 .App-header {
   font-family: 'Pathway Gothic One', sans-serif;
-  background: url();
   background-color: #222;
   height: 150px;
   padding: 20px;
@@ -64,11 +63,19 @@ input {
 
 input {
   height: 70px;
-  width: 90px;
+  width: 100px;
+  padding: 10px;
   background-color: red;
   color: white;
   font-family: 'Pathway Gothic One', sans-serif;
   font-weight: bold;
+  white-space: normal;
+  word-wrap: normal;
+  vertical-align: middle;
+}
+
+#soundButtonDiv{
+  padding: 5px;
 }
 
 /* Decent easy table css */

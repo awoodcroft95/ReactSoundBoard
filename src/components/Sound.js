@@ -7,7 +7,7 @@ class Sound extends Component {
 
         let sound = this.props.sound;
 
-        this.playSound1 = () => {
+        this.playSound = () => {
             let x = document.createElement("AUDIO");
             x.src = sound;
             x.volume = 0.2;
@@ -20,7 +20,7 @@ class Sound extends Component {
     }
     render(){
         return (
-            <input type="button" onClick={this.playSound1} value={this.props.soundName} id="soundButton"></input>
+            <input type="button" onClick={this.playSound} value={this.props.soundName} id="soundButton" style={this.props.color}></input>
         );
     };
 }

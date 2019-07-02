@@ -1,3 +1,7 @@
+# World of Warcraft React Sound Board
+
+This project is a website created with react that is just a fun sound board of classic world of warcraft meme sound clips.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

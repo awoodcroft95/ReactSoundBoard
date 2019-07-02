@@ -1,25 +1,11 @@
 import React, { Component } from 'react';
 import Sound from './components/Sound'
-//import Sound from 'react-sound';
-import leroy from './media/audio/leroy.swf.mp3'
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-const fs = require('fs');
+import audioData from './media/audio/audioData.json';
 
-const leroyRemote = "https://www.dropbox.com/s/9n85q0swm18n2wl/leroy.swf.mp3"
-
-const items = [];
-
-// fs.readdir("./media/audio/", function (err, files) {
-//   if (err) {
-//     return console.log('Unable to scan directory: ' + err);
-//   }
-//   files.forEach(function (file) {
-//     // Do whatever you want to do with the file
-//     items.push(<Sound sound={file} soundName="1"/>)
-// });
-// });
+const items = audioData;
 
 class App extends Component {
   constructor() {
@@ -38,8 +24,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        {items}
-        <Sound sound={leroy} soundName="Leroy Short"></Sound>
+        {items.map(function(item, index){
+          let colorStyle = {"background-color": "red"}
+          if(index%2 === 0){
+            colorStyle={"background-color": "blue"}
+          }
+          return <Sound sound={item.SoundUrl} soundName={item.SoundName} color={colorStyle}/>
+        })}
         <Footer/>
       </div>
     );
